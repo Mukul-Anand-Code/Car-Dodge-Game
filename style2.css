@@ -1,0 +1,333 @@
+@media(width < 600px) {
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .container {
+        height: 100vh;
+        width: 100vw;
+        border: 2px solid black;
+        overflow: hidden;
+    }
+
+    .heading {
+        height: 20%;
+        width: 100%;
+        /* border: 2px solid black; */
+        justify-items: center;
+        align-content: center;
+
+        & .name {
+            height: auto;
+            width: 200px;
+            /* border: 2px solid black; */
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 500;
+
+            & .carName {
+                width: 120px;
+                font-size: 40px;
+                /* border: 2px solid black; */
+                text-align: center;
+                background-color: firebrick;
+                color: aliceblue;
+            }
+
+            & .RaceName {
+                width: 120px;
+                font-size: 40px;
+                text-align: end;
+                /* border: 2px solid black; */
+                margin-top: 10px;
+                margin-left: 40px;
+                text-align: center;
+                background-color: #6b6565;
+                color: aliceblue;
+
+            }
+        }
+    }
+
+    .animationSection {
+        height: 80%;
+        width: 100%;
+        /* border: 2px solid black; */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+
+
+        .roadBg {
+            height: 20%;
+            width: 80%;
+            /* border: 2px solid black; */
+
+
+
+            & .image {
+                height: 100%;
+                width: 100%;
+                background-image: url(images-removebg-preview\ \(2\).png);
+                background-position: center;
+                background-repeat: repeat-x;
+                background-size: cover;
+                /* animation: movement 0.5s linear infinite;
+            -webkit-animation: movement 0.5s linear infinite; */
+                overflow: hidden;
+
+
+                & img {
+                    height: 100%;
+                    animation: movement2 2.5s linear infinite;
+                    -webkit-animation: movement2 2.5s linear infinite;
+                }
+            }
+        }
+
+
+
+        .startBtn {
+            height: auto;
+            width: auto;
+            /*border: 2px solid black;
+        */
+            font-size: 40px;
+            background-color: purple;
+            color: palegoldenrod;
+            letter-spacing: 2px;
+            border-radius: 15px;
+            -webkit-border-radius: 15px;
+            -moz-border-radius: 15px;
+            -ms-border-radius: 15px;
+            -o-border-radius: 15px;
+            font-family: cursive;
+            text-decoration: none;
+            padding: 5px;
+            cursor: pointer;
+        }
+
+
+
+
+    }
+
+    @keyframes movement {
+
+        from {
+            background-position-x: 0px;
+        }
+
+        to {
+            background-position-x: 100px;
+        }
+
+    }
+
+    @keyframes movement2 {
+
+        0% {
+            transform: translateX(-100px);
+            -webkit-transform: translateX(-100px);
+            -moz-transform: translateX(-100px);
+            -ms-transform: translateX(-100px);
+            -o-transform: translateX(-100px);
+        }
+
+        100% {
+            transform: translateX(650px);
+            -webkit-transform: translateX(650px);
+            -moz-transform: translateX(650px);
+            -ms-transform: translateX(650px);
+            -o-transform: translateX(650px);
+        }
+
+    }
+
+    body {
+        justify-items: center;
+    }
+
+    .container2 {
+        height: 100vh;
+        width: 100vw;
+        max-width: 700px;
+        border: 2px solid black;
+        overflow: hidden;
+    }
+
+    .roadImg {
+        height: 100%;
+        width: 100%;
+        background-image: url(background-1_0.png);
+        background-position: center;
+        background-repeat: repeat-y;
+        background-size: contain;
+        animation: movement3 3s linear infinite;
+        -webkit-animation: movement3 3s linear infinite;
+        overflow: hidden;
+        position: relative;
+        display: flex;
+        align-items:end ;
+    }
+
+    @keyframes movement3 {
+
+        from {
+            background-position-y: 0px;
+        }
+
+        to {
+            background-position-y: 700px;
+        }
+    }
+
+    .mainCar {
+        position: absolute;
+        bottom: 0;
+        left: 18%;
+        height: 10%;
+        /* border: 2px solid black; */
+
+        & img {
+            height: 100%;
+            filter: drop-shadow(10px 10px 20px black);
+            -webkit-filter: drop-shadow(10px 10px 20px black);
+        }
+    }
+
+    .left {
+        z-index: 2;
+        /* border: 5px solid green; */
+        height: 60%;
+        width: 50%;
+    }
+
+    .right {
+        z-index: 2;
+        /* border: 5px solid rebeccapurple; */
+        height: 60%;
+        width: 50%;
+    }
+
+    .enemyCar {
+        position: absolute;
+        top: -30%;
+        left: 32.5%;
+        height: 10%;
+        /*border: 2px solid black;
+    */
+        animation: carMovement 2.5s linear infinite;
+        -webkit-animation: carMovement 2.5s linear infinite;
+
+        & img {
+            height: 100%;
+        }
+    }
+
+
+
+    @keyframes carMovement {
+        from {
+            top: -30%;
+        }
+
+        to {
+            top: 100%;
+        }
+    }
+
+    .scoreBoard {
+        position: absolute;
+        /* border: 2px solid red; */
+        height: 20%;
+        right: 0;
+        color: white;
+        font-weight: 700;
+        width: 40%;
+        font-size: 18px;
+        top: 10px;
+        font-family: 'Courier New', Courier, monospace;
+
+
+        & .score {
+            /* border: 2px solid blue; */
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        & .highestScore {
+            /* border: 2px solid firebrick; */
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 10px;
+        }
+    }
+
+    .gameOver {
+        height: 30%;
+        width: 50%;
+        border: 5px solid rgb(231, 179, 7);
+        position: absolute;
+        top: 35%;
+        left: 25%;
+        background-color: rgb(67, 71, 67);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        z-index: 4;
+    }
+
+
+    .gameOverText {
+        font-size: 28px;
+        font-weight: 700;
+        font-family: "Poppins", sans-serif;
+        color: antiquewhite;
+        /* border: 2px solid black; */
+    }
+
+    .scoreBoard2 {
+        height: 30%;
+        /* border: 2px solid black; */
+        width: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        font-size: 25px;
+        font-family: 'Courier New', Courier, monospace;
+        color: white;
+        font-weight: 700;
+
+        & .score2 {
+            /* border: 2px solid blue; */
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        & .highestScore2 {
+            /* border: 2px solid firebrick; */
+            display: flex;
+            justify-content: space-evenly;
+        }
+    }
+
+    .button2 {
+        /*border: 2px solid black;
+    */
+        padding: 7px;
+        background-color: #0984d6;
+        color: white;
+        letter-spacing: 2px;
+        font-family: "Poppins", sans-serif;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        cursor: pointer;
+    }
+}
